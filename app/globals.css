@@ -2,26 +2,105 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* :root {
+  --lapis-lazuli: #0e607e;
+  --timberwolf: #d8d4ce;
+  --paynes-gray: #4f5f65;
+  --cerulean: #056e88;
+  --indigo-dye: #07516f;
+  --prussian-blue: #083055;
+  --oxford-blue: #0f1e3c;
+  --alice-blue: #eff7f8;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --lapis-lazuli: #0e607e;
+    --timberwolf: #d8d4ce;
+    --paynes-gray: #4f5f65;
+    --cerulean: #056e88;
+    --indigo-dye: #07516f;
+    --prussian-blue: #083055;
+    --oxford-blue: #0f1e3c;
+    --alice-blue: #eff7f8;
   }
-}
+} */
 
 body {
-  color: var(--foreground);
-  background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 220 100% 100%;
+    --foreground: 220 5% 10%;
+    --card: 220 50% 100%;
+    --card-foreground: 220 5% 15%;
+    --popover: 220 100% 100%;
+    --popover-foreground: 220 100% 10%;
+    --primary: 220 60% 14.7%;
+    --primary-foreground: 36, 11%, 83%;
+    --secondary: 220 30% 90%;
+    --secondary-foreground: 0 0% 0%;
+    --muted: 182 30% 95%;
+    --muted-foreground: 220 5% 40%;
+    --accent: 182 30% 90%;
+    --accent-foreground: 220 5% 15%;
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 220 5% 100%;
+    --border: 220 30% 82%;
+    --input: 220 30% 50%;
+    --ring: 220 60% 14.7%;
+    --radius: 0.5rem;
+
+    --ring: 0 0% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+  .dark {
+    --background: 220 50% 10%;
+    --foreground: 220 5% 100%;
+    --card: 220 50% 10%;
+    --card-foreground: 220 5% 100%;
+    --popover: 220 50% 5%;
+    --popover-foreground: 220 5% 100%;
+    --primary: 220 60% 14.7%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 30% 20%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 182 30% 25%;
+    --muted-foreground: 220 5% 65%;
+    --accent: 182 30% 25%;
+    --accent-foreground: 220 5% 95%;
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 220 5% 100%;
+    --border: 220 30% 50%;
+    --input: 220 30% 50%;
+    --ring: 220 60% 14.7%;
+    --radius: 0.5rem;
+
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
   }
 }
